@@ -3,9 +3,72 @@
 .mobile-main-container {
     background-color: $app-background;
     position: absolute;
-    top: 10rem;
-    left: 17.5rem;
-    height: 55%;
-    width: 25%;
-    border: 1rem solid white;
+    top: 7rem;
+    left: 18rem;
+    height: 65%;
+    width: 35%;
+    border: 0.55rem solid $primary-color-1;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+.mobile-header-container {
+    background: $gradient;
+    color: $primary-color-1;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    border-top-left-radius: 1.75rem;
+    border-top-right-radius: 1.75rem;
+} 
+
+.mobile-header-block {
+    background-color: $primary-color-1;
+    position: absolute;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    width: 50%;
+    height: 20%;
+    top: 0;
+    left: 25%;
+}
+
+.mobile-header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    padding-right: 0.65rem;
+    #icon {
+        font-size: 2.25rem;
+    }
+} 
+
+.mobile-header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    #icon {
+        font-size: 2.25rem;
+    }
+    img {
+        border: 0.1rem solid $primary-color-1;
+        border-radius: 100%;
+        width: 20%;
+        height: 45%;
+    }
+    .mobile-header-left-text {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+        width: 80%;
+        margin-left: 0.5rem;
+    } 
+    .mobile-header-left-text p {
+        margin-top: -0.65rem;
+    }
 }
