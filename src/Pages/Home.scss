@@ -1,0 +1,59 @@
+$app-background: hsl(270, 20%, 96%);
+$gradient: linear-gradient(202deg, rgba(233,66,255,1) 0%, rgba(136,56,255,1) 71%);
+$paragraph-color: hsl(270, 7%, 64%);
+$heading-color: hsl(271, 36%, 24%);
+
+.home-main-container {
+    background-color: $app-background;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.home-left-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.home-left-illustrative {
+    background: $gradient;
+    width: 50%;
+    height: 90%;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+}
+
+.home-right-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.home-right-info {
+    width: 60%;
+    z-index: 10;
+    p {
+        font-weight: 500;
+        line-height: 1.75;
+        color: $paragraph-color;
+    }
+    h1 {
+        color: $heading-color;
+    }
+}
+
+.home-right-illustrative{
+    background: $gradient;
+    position: absolute;
+    z-index: 0;
+    width: 25%;
+    height: 70%;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+}

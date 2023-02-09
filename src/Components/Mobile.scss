@@ -1,0 +1,11 @@
+@import '../Pages/Home.scss';
+
+.mobile-main-container {
+    background-color: $app-background;
+    position: absolute;
+    top: 10rem;
+    left: 17.5rem;
+    height: 55%;
+    width: 25%;
+    border: 1rem solid white;
+}
