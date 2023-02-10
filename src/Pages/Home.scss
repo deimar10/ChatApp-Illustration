@@ -1,8 +1,12 @@
 $app-background: hsl(270, 20%, 96%);
 $gradient: linear-gradient(202deg, rgba(233,66,255,1) 0%, rgba(136,56,255,1) 71%);
+$gradient-2: linear-gradient(202deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 81%);
 $paragraph-color: hsl(270, 7%, 64%);
 $heading-color: hsl(271, 36%, 24%);
 $primary-color-1: hsl(0, 0%, 100%);
+$user-chat-color: hsla(276, 55%, 52%, 0.676);
+$user-chat-background: hsl(275, 100%, 93%);
+$client-chat-color: hsl(271, 15%, 43%);
 
 .home-main-container {
     background-color: $app-background;
@@ -20,7 +24,7 @@ $primary-color-1: hsl(0, 0%, 100%);
 
 .home-left-illustrative {
     background: $gradient;
-    width: 50%;
+    width: 55%;
     height: 90%;
     border-bottom-left-radius: 10rem;
     border-bottom-right-radius: 10rem;
@@ -48,7 +52,7 @@ $primary-color-1: hsl(0, 0%, 100%);
 }
 
 .home-right-illustrative{
-    background: $gradient;
+    background: hsl(268, 74%, 95%);
     position: absolute;
     z-index: 0;
     width: 25%;
