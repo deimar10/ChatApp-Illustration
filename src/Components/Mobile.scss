@@ -43,6 +43,7 @@
     padding-right: 0.65rem;
     #icon {
         font-size: 2.25rem;
+        cursor: pointer;
     }
 } 
 
@@ -69,6 +70,25 @@
     } 
     .mobile-header-left-text p {
         margin-top: -0.50rem;
+    }
+}
+
+.mobile-settings-view {
+    background-color: rgba(255, 255, 255, 0.798);
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    color: rgb(159, 159, 159);
+    border-radius: 0.25rem;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    width: 45%;
+    text-align: center;
+    p {
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(212, 212, 212);
+        cursor: pointer;
     }
 }
 

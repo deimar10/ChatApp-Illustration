@@ -1,0 +1,41 @@
+@import '../Components/Mobile.scss';
+
+.profile-header-left {
+    position: relative;
+    @extend .mobile-header-left;
+    width: 90%;
+    img {
+        width: 24%;
+        height: 80%;
+        position: absolute;
+        top: 1.5rem;
+        left: 2rem;
+    }
+    #icon {
+        margin-right: 12rem;
+        font-size: 2.25rem;
+    }
+}
+
+.profile-header-right {
+    @extend .mobile-header-right;
+    width: 10%;
+}
+
+#activity-status {
+    position: absolute;
+    left: 5.5rem;
+    height: 25%;
+    color: greenyellow;
+}
+
+.profile-information {
+    padding: 1rem;
+    h3 {
+        color: $heading-color;
+    }
+    p {
+        font-size: 0.85rem;
+        color: $paragraph-color;
+    }
+}

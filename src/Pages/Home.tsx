@@ -2,13 +2,13 @@ import React from 'react';
 import './Home.scss';
 import Mobile from '../Components/Mobile';
 
-function Home (){
+function Home ({profileView, setProfileView}: any){
     return (
         <div className='home-main-container'>
             <div className='home-left-container'>
                 <div className='home-left-illustrative'></div>
                 <div className='home-mobile-container'>
-                    <Mobile />
+                    <Mobile profileView={profileView} setProfileView={setProfileView} />
                 </div>
             </div>
             <div className='home-right-container'>

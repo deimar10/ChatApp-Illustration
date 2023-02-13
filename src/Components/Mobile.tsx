@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Profile from '../MobileTabs/Profile';
 import './Mobile.scss';
 import {BiChevronLeft, BiDotsVerticalRounded} from 'react-icons/bi';
 import {HiChevronRight} from 'react-icons/hi';
@@ -7,8 +8,20 @@ import FirstDog from '../images/dog-image-1.jpg';
 import SecondDog from '../images/dog-image-2.jpg';
 import ThirdDog from '../images/dog-image-3.jpg';
 
-function Mobile() {
+function Mobile({profileView, setProfileView}: any) {
+
+    const [settings, setSettings] = useState<boolean>(false);
+
+    const handleSettings = () => {
+        setSettings(!settings);
+    }
+
+    const handleProfileView = () => {
+        setProfileView(true);
+    }
     return (
+     <div>
+       {profileView ? <Profile setProfileView={setProfileView} /> : 
         <div className='mobile-main-container'>
             <div className='mobile-header-container'>
                 <div className='mobile-header-block'></div>
@@ -21,8 +34,12 @@ function Mobile() {
                     </div>
                 </div>
                 <div className='mobile-header-right'> 
-                    <BiDotsVerticalRounded id='icon' />
+                    <BiDotsVerticalRounded id='icon' onClick={handleSettings} />
                 </div>
+                {settings ? <div className='mobile-settings-view'>
+                        <p onClick={handleProfileView}>Profile</p>
+                    </div> 
+                 : null }
             </div>
             <div className='mboile-body-container'>
                 <div className='user-messages'>
@@ -65,6 +82,8 @@ function Mobile() {
                    <span><input placeholder='Type a message...'></input><HiChevronRight id='submit'/></span> 
                 </div>
             </div>
+        </div>
+         }
         </div>
     );
 }
