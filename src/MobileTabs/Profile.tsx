@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import IdleTimer from '../Components/IdleTimer';
 import {BiChevronLeft, BiDotsVerticalRounded} from 'react-icons/bi';
 import {GoPrimitiveDot} from 'react-icons/go';
 import './Profile.scss'
 import Avatar from '../images/avatar.jpg';
 
 function Profile({setProfileView}: any) {
+
+    const [active, setActive] = useState<boolean>(false);
+
+    function handleIdleTimeout() {
+        setActive(true);
+    }
 
     const handleBack = () => {
         setProfileView(false);
@@ -16,7 +23,10 @@ function Profile({setProfileView}: any) {
                 <div className='profile-header-left'>
                     <BiChevronLeft id='icon' onClick={handleBack} />
                     <img src={Avatar} />
-                    <GoPrimitiveDot id='activity-status' />
+                    <IdleTimer timeout={30000} onTimeout={handleIdleTimeout} setActive={setActive} />
+                    <GoPrimitiveDot id='activity-status' style={{
+                        color: active ? 'rgb(255, 61, 47)' : 'greenyellow'
+                    }} />
                 </div>
                 <div className='profile-header-right'>
                     <BiDotsVerticalRounded id='icon' />
