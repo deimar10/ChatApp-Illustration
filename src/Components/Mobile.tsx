@@ -11,6 +11,20 @@ import ThirdDog from '../images/dog-image-3.jpg';
 function Mobile({profileView, setProfileView}: any) {
 
     const [settings, setSettings] = useState<boolean>(false);
+    const [messages, setMessages] = useState<any[]>([]);
+    const [message, setMessage] = useState<any>({
+        userMessage: ''
+    });
+
+    const messageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newMessage = {...message, [e.target.name] : e.target.value};
+        setMessage(newMessage);
+    }
+
+    const handleSubmit = () => {
+        const newMessage = { ...message };
+        setMessages([...messages, newMessage]);
+    }
 
     const handleSettings = () => {
         setSettings(!settings);
@@ -41,7 +55,9 @@ function Mobile({profileView, setProfileView}: any) {
                     </div> 
                  : null }
             </div>
-            <div className='mboile-body-container'>
+            <div className='mboile-body-container' style={{
+                overflowY: 'scroll' 
+            }}>
                 <div className='user-messages'>
                     <div id='message'>
                         <p>That sounds great. I'd be happy with that.</p>
@@ -78,8 +94,19 @@ function Mobile({profileView, setProfileView}: any) {
                     <p>1 hour walk</p>
                     <h3>$49</h3>
                 </div>
+                {messages.map((message, index) => {
+                    return (
+                        <div key={index}>
+                            <div className='user-messages'>
+                                <div id='message'>
+                                    <p>{message.userMessage}</p>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })}
                 <div className='message-input-container'>
-                   <span><input placeholder='Type a message...'></input><HiChevronRight id='submit'/></span> 
+                   <span><input name="userMessage" placeholder='Type a message...' onChange={messageChange}></input><HiChevronRight id='submit' onClick={handleSubmit}/></span> 
                 </div>
             </div>
         </div>
