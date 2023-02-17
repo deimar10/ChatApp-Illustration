@@ -106,7 +106,10 @@ function Mobile({profileView, setProfileView}: any) {
                     );
                 })}
                 <div className='message-input-container'>
-                   <span><input name="userMessage" placeholder='Type a message...' onChange={messageChange}></input><HiChevronRight id='submit' onClick={handleSubmit}/></span> 
+                   <span>
+                    <input name="userMessage" placeholder='Type a message...' onChange={messageChange}></input>
+                   <HiChevronRight id='submit' onClick={handleSubmit}/>
+                   </span> 
                 </div>
             </div>
         </div>
