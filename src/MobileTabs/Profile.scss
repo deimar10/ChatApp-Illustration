@@ -39,3 +39,44 @@
         color: $paragraph-color;
     }
 }
+
+.profile-user-offers {
+    @extend .user-offers;
+    margin-left: 1rem;
+}
+
+.offer-confirmation {
+    background-color: $primary-color-1;
+    border-radius: 0.35rem;
+    padding: 0.25rem;
+    padding-bottom: 0.65rem;
+    width: 82.5%;
+    margin: 0 auto;
+    text-align: center;
+    p {
+        color: $paragraph-color;
+        font-size: 0.75rem;
+    }
+    button {
+        background: $gradient-2;
+        color: $primary-color-1;
+        cursor: pointer;
+        width: 30%;
+        font-size: 0.75rem;
+        padding: 0.35rem;
+        border-radius: 0.35rem;
+        border: 0;
+        margin-right: 0.5rem;
+    }
+}
+
+.offer-time {
+    @extend .offer-confirmation;
+    h3 {
+        color: $heading-color;
+        font-size: 0.85rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
+}
